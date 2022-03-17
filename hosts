@@ -1,0 +1,20 @@
+NewFabric-SPINE-1 ansible_host=192.168.1.101
+NewFabric-LEAF-1 ansible_host=192.168.1.103
+NewFabric-SPINE-2 ansible_host=192.168.1.102
+NewFabric-LEAF-2 ansible_host=192.168.1.104
+NewFabric-LEAF-3 ansible_host=192.168.1.105
+NewFabric-LEAF-4 ansible_host=192.168.1.106
+
+[spine]
+NewFabric-SPINE-1
+NewFabric-SPINE-2
+
+[leaf]
+NewFabric-LEAF-1
+NewFabric-LEAF-2
+NewFabric-LEAF-3
+NewFabric-LEAF-4
+
+[all:children]
+spine
+leaf
